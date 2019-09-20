@@ -13,12 +13,12 @@ true = ["There was a dog mayor", "You can't breathe and swallow at the same time
         "A bolt of lightning contains enough energy to toast 100,000 slices of bread"]
 false = ["France didn't stopped using the guillotine until 1900",
          "The average person will spend 8 months of their life waiting for red lights to turn green",
-         ""]
+         ]
 explanation = ["France stopped using the guillotine in 1977 not 1900", "The average person spends 6 months, not 8"
-               ""]
+               ]
+bank = 0
+total = 0
 while True:
-    bank = 0
-    total = 0
     money = int(input("Enter Bet:"))
     if money == 0:
         break
@@ -36,13 +36,13 @@ while True:
         bank -= money
         print("Congratulations that was the right choice "
               "Your money has now been increased by 1.5 and is: %s"
-              "and the bank is now at: %s" % total, bank)
+              " and the bank is now at: %s" % (total, bank))
     else:
         total -= money
         bank += money
-        print("Sorry values guest, that was the wrong answer and we have had to, "
-              "unfortunately, take your money. You are now at: %s and the bank is now"
-              "at: %s" % total, bank)
+        print("Sorry valued guest, that was the wrong answer and we have had to, "
+              "unfortunately, take your money. You are now at:%s and the bank is now"
+              " at:%s" % (total, bank))
     if picker1 == 1:
         print("As you know know the answer was false the real fact was as follows:")
         print(explanation[picker2])
